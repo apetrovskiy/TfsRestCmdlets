@@ -18,6 +18,7 @@ namespace TfsAutomation.Core.ObjectModel
 	public class Account
 	{
 		/*
+		sample
 		[
 		  {
 		    "AccountId": "14ba3122-98e3-4b40-82ce-bb89b905e151",
@@ -36,17 +37,17 @@ namespace TfsAutomation.Core.ObjectModel
 		]
 		*/
 		
-		public Guid AccountId { get; set; }
-	    public Guid NamespaceId { get; set; }
-	    public string AccountName { get; set; }
-	    public string OrganizationName { get; set; }
-	    public AccountTypes AccountType { get; set; }
-	    public Guid AccountOwner { get; set; }
-	    public Guid CreatedBy { get; set; }
-	    public DateTime CreatedDate { get; set; }
-	    public AccountStatuses AccountStatus { get; set; }
-	    public object StatusReason { get; set; }
-	    public Guid LastUpdatedBy { get; set; }
-	    public List<object> Properties { get; set; }
+		public virtual Guid AccountId { get; set; }
+		public virtual Guid NamespaceId { get; set; }
+		public virtual string AccountName { get; set; }
+		public virtual string OrganizationName { get; set; }
+		public virtual AccountTypes AccountType { get; set; }
+		public virtual Guid AccountOwner { get; set; }
+		public virtual Guid CreatedBy { get; set; }
+		public virtual DateTime CreatedDate { get; set; }
+		public virtual AccountStatuses AccountStatus { get; set; }
+		public virtual object StatusReason { get; set; }
+		public virtual Guid LastUpdatedBy { get; set; }
+		public virtual List<object> Properties { get; set; }
 	}
 }

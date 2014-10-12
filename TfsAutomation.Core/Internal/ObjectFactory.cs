@@ -10,16 +10,23 @@
 namespace TfsAutomation.Core
 {
 	using System;
+	using Spring.Core;
+	using Spring.Context;
+	using Spring.Context.Support;
 
 	public static class ObjectFactory
 	{
 		static ObjectFactory ()
 		{
+			// initialize container...
+
+
 		}
 
 		public static T Resolve<T>(T type)
 		{
-			return default(T);
+			var ctx = ContextRegistry.GetContext();
+			return (T)ctx.GetObject (type.GetType().Name);
 		}
 	}
 }
