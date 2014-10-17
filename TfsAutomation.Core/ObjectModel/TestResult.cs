@@ -10,6 +10,7 @@
 namespace TfsAutomation.Core
 {
 	using System;
+    using TfsAutomation.Core.ObjectModel;
 
 	public class TestResult
 	{
@@ -134,7 +135,8 @@ namespace TfsAutomation.Core
 		public virtual DateTime startedDate { get; set; }
 		public virtual DateTime completedDate { get; set; }
 		public virtual string outcome { get; set; }
-		public virtual object owner { get; set; }
+		// public virtual object owner { get; set; }
+		public virtual Owner owner { get; set; }
 		public virtual int revision { get; set; }
 		public virtual object runBy { get; set; }
 		public virtual string state { get; set; }

@@ -10,6 +10,7 @@
 namespace TfsAutomation.Core
 {
 	using System;
+    using TfsAutomation.Core.ObjectModel;
 
 	public class TestRun
 	{
@@ -98,7 +99,8 @@ namespace TfsAutomation.Core
 		public virtual string url { get; set; }
 		public virtual bool isAutomated { get; set; }
 		public virtual string iteration { get; set; }
-		public virtual object owner { get; set; }
+		// public virtual object owner { get; set; }
+		public virtual Owner owner { get; set; }
 		public virtual DateTime startedDate { get; set; }
 		public virtual DateTime completedDate { get; set; }
 		public virtual string state { get; set; }
