@@ -1,24 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../STUPS/TMX/Tmx.Client/Helpers/RestRequestCreator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="testTfsRestCmdlets/Program.cs">
     <Files>
-      <File FileName="TfsAutomation.Core/Internal/ObjectFactory.cs" Line="1" Column="1" />
-      <File FileName="TfsAutomation.Core/Actions/BranchesLoader.cs" Line="81" Column="1" />
-      <File FileName="TfsAutomation.Core/TfsData/TfsData.cs" Line="44" Column="44" />
-      <File FileName="testTfsRestCmdlets/Program.cs" Line="31" Column="1" />
-      <File FileName="../STUPS/TMX/Tmx.Client/Helpers/RestRequestCreator.cs" Line="26" Column="1" />
-      <File FileName="TfsAutomation.Core/Helpers/RestRequestCreator.cs" Line="24" Column="29" />
+      <File FileName="TfsAutomation.Core/Actions/BranchesLoader.cs" Line="65" Column="9" />
+      <File FileName="testTfsRestCmdlets/Program.cs" Line="23" Column="33" />
+      <File FileName="TfsAutomation.Core/Helpers/RestRequestCreator.cs" Line="37" Column="1" />
+      <File FileName="TfsAutomation.Core/ObjectModel/Enums.cs" Line="10" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="testTfsRestCmdlets" expanded="True" />
+          <Node name="testTfsRestCmdlets" expanded="True">
+            <Node name="Program.cs" selected="True" />
+          </Node>
           <Node name="TfsAutomation.Core" expanded="True">
-            <Node name="References" expanded="True" />
             <Node name="Actions" expanded="True" />
-            <Node name="Helpers" expanded="True">
-              <Node name="RestRequestCreator.cs" selected="True" />
-            </Node>
+            <Node name="Helpers" expanded="True" />
             <Node name="Internal" expanded="True" />
             <Node name="TfsData" expanded="True" />
           </Node>
@@ -36,7 +33,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/projects/PS/TfsRestCmdlets/testTfsRestCmdlets/Program.cs" line="30" column="27" />
+      <Breakpoint file="/projects/PS/TfsRestCmdlets/testTfsRestCmdlets/Program.cs" line="33" column="27" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

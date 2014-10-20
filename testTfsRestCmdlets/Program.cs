@@ -20,12 +20,12 @@ namespace testVisualStudioOnline
 		{
 			Console.WriteLine ("Hello World!");
 			
-			TfsData.BaseUrl = "https://alexanderpetrovskiy.visualstudio.com";
+			TfsData.BaseUrl = "https://a-y.visualstudio.com";
 			TfsData.CurrentProjectCollectionName = "DefaultCollection";
 			TfsData.CurrentProjectName = "testprj";
 			TfsData.ApiVersion = "";
-			TfsData.Username = "shuran"; //@"alexander.petrovsky@netwrix.com";
-			TfsData.Password = @"sss=1qwerty"; // @"msdn,6=1qwerty";
+			TfsData.Username = "s-n";
+			TfsData.Password = @"s3standard";
 			TfsData.AuthenticationType = AuthenticationTypes.NTLM;
 
 			var requestCreator = new RestRequestCreator ();
