@@ -10,6 +10,8 @@
 namespace TfsAutomation.Core
 {
 	using System;
+	using TfsAutomation.Core.ObjectModel;
+
 	public class TfsData
 	{
 		// VERB https://{account}.VisualStudio.com/DefaultCollection/_apis[/{area}]/{resource}?api-version=1.0-preview
@@ -40,10 +42,16 @@ namespace TfsAutomation.Core
 		public static string CurrentProjectName { get; set; }
 
 		public static string ApiVersion { get; set; }
+		public static AuthenticationTypes AuthenticationType { get; set; }
+
+		public static string Domain { get; set; }
+		public static string Username { get; set; }
+		public static string Password { get; set; }
 
 		internal static string BaseUrlAccounts = BaseUrl + "/_apis/accounts/";
-		internal static string BaseUtlCollectionApis = BaseUrl + "/" + CurrentProjectCollectionName + "/_apis/";
-		internal static string BaseUtlProjectApis = BaseUrl + "/" + CurrentProjectCollectionName + "/" + CurrentProjectName + "/_apis/";
+		internal static string BaseUrlCollectionApis = BaseUrl + "/" + CurrentProjectCollectionName + "/_apis/";
+		internal static string BaseUrlProjectApis = BaseUrl + "/" + CurrentProjectCollectionName + "/" + CurrentProjectName + "/_apis/";
+		internal static string BaseUrlBranches = BaseUrl + "/" + CurrentProjectCollectionName + "/" + "_apis/tfvc/branches?includeChildren=true";
 	}
 }
 
