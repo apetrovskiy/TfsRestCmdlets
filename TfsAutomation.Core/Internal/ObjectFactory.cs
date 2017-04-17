@@ -7,14 +7,11 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-namespace TfsAutomation.Core
+namespace TfsAutomation.Core.Internal
 {
-	using System;
-	using Spring.Core;
-	using Spring.Context;
-	using Spring.Context.Support;
+    using Spring.Context.Support;
 
-	public static class ObjectFactory
+    public static class ObjectFactory
 	{
 		static ObjectFactory ()
 		{

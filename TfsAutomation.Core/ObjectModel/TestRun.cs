@@ -7,12 +7,11 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-namespace TfsAutomation.Core
+namespace TfsAutomation.Core.ObjectModel
 {
-	using System;
-    using TfsAutomation.Core.ObjectModel;
+    using System;
 
-	public class TestRun
+    public class TestRun
 	{
 		/*
 		sample
@@ -94,18 +93,18 @@ namespace TfsAutomation.Core
 		  "count": 4
 		}
 		*/
-		public virtual int id { get; set; }
-		public virtual string name { get; set; }
-		public virtual string url { get; set; }
-		public virtual bool isAutomated { get; set; }
-		public virtual string iteration { get; set; }
+		public virtual int Id { get; set; }
+		public virtual string Name { get; set; }
+		public virtual string Url { get; set; }
+		public virtual bool IsAutomated { get; set; }
+		public virtual string Iteration { get; set; }
 		// public virtual object owner { get; set; }
-		public virtual Owner owner { get; set; }
-		public virtual DateTime startedDate { get; set; }
-		public virtual DateTime completedDate { get; set; }
-		public virtual string state { get; set; }
-		public virtual TestPlan plan { get; set; }
-		public virtual int revision { get; set; }
+		public virtual Owner Owner { get; set; }
+		public virtual DateTime StartedDate { get; set; }
+		public virtual DateTime CompletedDate { get; set; }
+		public virtual string State { get; set; }
+		public virtual TestPlan Plan { get; set; }
+		public virtual int Revision { get; set; }
 	}
 }
 

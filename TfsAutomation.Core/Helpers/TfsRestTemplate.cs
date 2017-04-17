@@ -7,11 +7,9 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-namespace TfsAutomation.Core
+namespace TfsAutomation.Core.Helpers
 {
-	using System;
-
-	public class TfsRestTemplate
+    public class TfsRestTemplate
 	{
 		public TfsRestTemplate ()
 		{

@@ -9,24 +9,21 @@
 
 namespace TfsAutomation.Core.Actions
 {
-    using System;
     using System.Collections.Generic;
-    using System.Net;
     using System.Linq;
+    using Helpers;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;
-    using Spring.Http.Client;
-    using Spring.Http.Converters.Json;
-    using Spring.Rest.Client;
     using TfsAutomation.Core.ObjectModel;
-    
+    using TfsData;
+
     /// <summary>
     /// Description of BranchesLoader.
     /// </summary>
     public class BranchesLoader
     {
         // RestTemplate _restTemplate;
-		RestRequestCreator _restRequest;
+        readonly RestRequestCreator _restRequest;
 
 		// public BranchesLoader(RestTemplate restTemplate, string baseUrl, string domain, string username, string password)
 		public BranchesLoader(RestRequestCreator restRequestCreator)
@@ -39,13 +36,13 @@ namespace TfsAutomation.Core.Actions
         {
             // createClient(@"http://spbtfs2013.nwx.local:8080/tfs/defaultcollection/_apis/tfvc/branches", @"nwx", @"at_nwx_user", @"Lock12Lock");
 			// createClient (_branchesUrl, _domain, _username, _password);
-            var response = loadAllBranchesData();
+            var response = LoadAllBranchesData();
             
             int count = (int)response["count"];
             var topBranch0 = (JToken)response["value"][0];
             var topBranch = JsonConvert.DeserializeObject<Branch>(topBranch0.ToString());
             var branches = new List<Branch> { topBranch };
-            recursiveAddToList(branches, topBranch);
+            RecursiveAddToList(branches, topBranch);
             
 //            foreach (var element in branches) {
 //                Console.WriteLine(element.Path);
@@ -54,12 +51,12 @@ namespace TfsAutomation.Core.Actions
             return branches.Select(branch => branch.Path).ToList();
         }
         
-        void recursiveAddToList(List<Branch> list, Branch item)
+        void RecursiveAddToList(List<Branch> list, Branch item)
         {
             if (0 == item.Children.Count) return;
             list.AddRange(item.Children);
             foreach (var child in item.Children) {
-                recursiveAddToList(list, child);
+                RecursiveAddToList(list, child);
             }
         }
         
@@ -76,7 +73,7 @@ namespace TfsAutomation.Core.Actions
         }
 		*/
         
-        JObject loadAllBranchesData()
+        JObject LoadAllBranchesData()
         {
             // return _restTemplate.GetForObject<JObject>(@"http://spbtfs2013.nwx.local:8080/tfs/defaultcollection/_apis/tfvc/branches?includeChildren=true");//, prms);
 			// return _restTemplate.GetForObject<JObject>(TfsData.BaseUrlBranches);
@@ -84,7 +81,7 @@ namespace TfsAutomation.Core.Actions
 			return _restRequest.GetRestTemplate ().GetForObject<JObject> (_restRequest.GetRestTemplate().BaseAddress + TfsData.BaseUrlBranches);
         }
         
-        void selectBranchesForProject(JObject response, string productName)
+        void SelectBranchesForProject(JObject response, string productName)
         {
             // 
         }

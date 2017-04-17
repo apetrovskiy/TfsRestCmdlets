@@ -98,4 +98,7 @@
     <None Include="packages.config" />
     <None Include="App_Readme\Spring.Rest.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ObjectModel\" />
+  </ItemGroup>
 </Project>

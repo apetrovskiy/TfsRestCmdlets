@@ -7,11 +7,11 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-namespace TfsAutomation.Core
+namespace TfsAutomation.Core.ObjectModel
 {
-	using System;
+    using System;
 
-	public class User
+    public class User
 	{
 		/*
 		sample
@@ -81,11 +81,11 @@ namespace TfsAutomation.Core
 		  ]
 		}
 		*/
-		public virtual int roomId { get; set; }
+		public virtual int RoomId { get; set; }
 		public virtual object user { get; set; }
-		public virtual DateTime lastActivity { get; set; }
-		public virtual DateTime joinedDate { get; set; }
-		public virtual bool isOnline { get; set; }
+		public virtual DateTime LastActivity { get; set; }
+		public virtual DateTime JoinedDate { get; set; }
+		public virtual bool IsOnline { get; set; }
 	}
 }
 

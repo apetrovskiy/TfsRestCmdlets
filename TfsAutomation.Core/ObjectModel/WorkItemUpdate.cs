@@ -7,11 +7,11 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-namespace TfsAutomation.Core
+namespace TfsAutomation.Core.ObjectModel
 {
-	using System;
+    using System;
 
-	public class WorkItemUpdate
+    public class WorkItemUpdate
 	{
 		/*
 		sample
@@ -39,12 +39,12 @@ namespace TfsAutomation.Core
 		  "url": "https://fabrikam.visualstudio.com/DefaultCollection/_apis/wit/workItems/182/updates/4"
 		}
 		*/
-		public virtual int id { get; set; }
-		public virtual int rev { get; set; }
-		public virtual object revisedBy { get; set; }
-		public virtual DateTime revisedDate { get; set; }
-		public virtual object relations { get; set; }
-		public virtual string url { get; set; }
+		public virtual int Id { get; set; }
+		public virtual int Rev { get; set; }
+		public virtual object RevisedBy { get; set; }
+		public virtual DateTime RevisedDate { get; set; }
+		public virtual object Relations { get; set; }
+		public virtual string Url { get; set; }
 	}
 }
 

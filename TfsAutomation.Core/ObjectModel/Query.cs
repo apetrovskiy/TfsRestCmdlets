@@ -7,11 +7,11 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-namespace TfsAutomation.Core
+namespace TfsAutomation.Core.ObjectModel
 {
-	using System;
+    using System;
 
-	public class Query
+    public class Query
 	{
 		/*
 		sample
@@ -57,14 +57,14 @@ namespace TfsAutomation.Core
 		  ]
 		}
 		*/
-		public virtual Guid id { get; set; }
-		public virtual string name { get; set; }
-		public virtual string path { get; set; }
-		public virtual bool isFolder { get; set; }
-		public virtual bool hasChildren { get; set; }
-		public virtual Query[] children { get; set; }
-		public virtual bool isPublic { get; set; }
-		public virtual string url { get; set; }
+		public virtual Guid Id { get; set; }
+		public virtual string Name { get; set; }
+		public virtual string Path { get; set; }
+		public virtual bool IsFolder { get; set; }
+		public virtual bool HasChildren { get; set; }
+		public virtual Query[] Children { get; set; }
+		public virtual bool IsPublic { get; set; }
+		public virtual string Url { get; set; }
 	}
 }
 

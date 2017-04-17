@@ -7,11 +7,9 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-namespace TfsAutomation.Core
+namespace TfsAutomation.Core.ObjectModel
 {
-	using System;
-
-	public class WorkItem
+    public class WorkItem
 	{
 		/*
 		sample
@@ -84,10 +82,10 @@ namespace TfsAutomation.Core
 		  ]
 		}
 		*/
-		public virtual int id { get; set; }
-		public virtual int rev { get; set; }
-		public virtual object fields { get; set; }
-		public virtual string url { get; set; }
+		public virtual int Id { get; set; }
+		public virtual int Rev { get; set; }
+		public virtual object Fields { get; set; }
+		public virtual string Url { get; set; }
 	}
 }
 

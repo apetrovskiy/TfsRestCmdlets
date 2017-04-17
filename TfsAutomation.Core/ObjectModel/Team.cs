@@ -7,11 +7,11 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-namespace TfsAutomation.Core
+namespace TfsAutomation.Core.ObjectModel
 {
-	using System;
+    using System;
 
-	public class Team
+    public class Team
 	{
 		/*
 		sample
@@ -35,11 +35,11 @@ namespace TfsAutomation.Core
 		  "count": 2
 		}
 		*/
-		public virtual Guid id { get; set; }
-		public virtual string name { get; set; }
-		public virtual string url { get; set; }
-		public virtual string description { get; set; }
-		public virtual string identityUrl { get; set; }
+		public virtual Guid Id { get; set; }
+		public virtual string Name { get; set; }
+		public virtual string Url { get; set; }
+		public virtual string Description { get; set; }
+		public virtual string IdentityUrl { get; set; }
 	}
 }
 

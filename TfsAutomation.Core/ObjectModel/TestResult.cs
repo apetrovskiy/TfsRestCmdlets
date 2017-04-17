@@ -7,12 +7,11 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-namespace TfsAutomation.Core
+namespace TfsAutomation.Core.ObjectModel
 {
-	using System;
-    using TfsAutomation.Core.ObjectModel;
+    using System;
 
-	public class TestResult
+    public class TestResult
 	{
 		/*
 		sample
@@ -129,26 +128,26 @@ namespace TfsAutomation.Core
 		}
 		*/
 
-		public virtual int id { get; set; }
-		public virtual object configuration { get; set; }
-		public virtual Project project { get; set; }
-		public virtual DateTime startedDate { get; set; }
-		public virtual DateTime completedDate { get; set; }
-		public virtual string outcome { get; set; }
+		public virtual int Id { get; set; }
+		public virtual object Configuration { get; set; }
+		public virtual Project Project { get; set; }
+		public virtual DateTime StartedDate { get; set; }
+		public virtual DateTime CompletedDate { get; set; }
+		public virtual string Outcome { get; set; }
 		// public virtual object owner { get; set; }
-		public virtual Owner owner { get; set; }
-		public virtual int revision { get; set; }
-		public virtual object runBy { get; set; }
-		public virtual string state { get; set; }
-		public virtual TestCase testCase { get; set; }
-		public virtual object testRun { get; set; }
-		public virtual DateTime lastUpdatedDate { get; set; }
-		public virtual DateTime lastUpdatedBy { get; set; }
-		public virtual int priority { get; set; }
-		public virtual string computerName { get; set; }
-		public virtual DateTime createdDate { get; set; }
-		public virtual object associatedBugs { get; set; }
-		public virtual string url { get; set; }
+		public virtual Owner Owner { get; set; }
+		public virtual int Revision { get; set; }
+		public virtual object RunBy { get; set; }
+		public virtual string State { get; set; }
+		public virtual TestCase TestCase { get; set; }
+		public virtual object TestRun { get; set; }
+		public virtual DateTime LastUpdatedDate { get; set; }
+		public virtual DateTime LastUpdatedBy { get; set; }
+		public virtual int Priority { get; set; }
+		public virtual string ComputerName { get; set; }
+		public virtual DateTime CreatedDate { get; set; }
+		public virtual object AssociatedBugs { get; set; }
+		public virtual string Url { get; set; }
 	}
 }
 

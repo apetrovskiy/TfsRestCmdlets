@@ -21,7 +21,7 @@ namespace TfsAutomation.Core.ObjectModel
 
 	public enum AuthenticationTypes
 	{
-		NTLM,
+		Ntlm,
 		OAuth
 	}
 }

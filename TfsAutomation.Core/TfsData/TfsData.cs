@@ -7,12 +7,11 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-namespace TfsAutomation.Core
+namespace TfsAutomation.Core.TfsData
 {
-	using System;
-	using TfsAutomation.Core.ObjectModel;
+    using ObjectModel;
 
-	public class TfsData
+    public class TfsData
 	{
 		// VERB https://{account}.VisualStudio.com/DefaultCollection/_apis[/{area}]/{resource}?api-version=1.0-preview
 		// GET https://{account}.visualstudio.com/defaultcollection/_apis/git[/{project}]/repositories?api-version={version}

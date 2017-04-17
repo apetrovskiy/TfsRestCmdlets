@@ -7,11 +7,11 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-namespace TfsAutomation.Core
+namespace TfsAutomation.Core.ObjectModel
 {
-	using System;
+    using System;
 
-	public class TestSuite
+    public class TestSuite
 	{
 		/*
 		sample
@@ -162,20 +162,20 @@ namespace TfsAutomation.Core
 		  "count": 4
 		}
 		*/
-		public virtual int id { get; set; }
-		public virtual string name { get; set; }
-		public virtual string url { get; set; }
-		public virtual Project project { get; set; }
-		public virtual TestPlan plan { get; set; }
-		public virtual int revision { get; set; }
-		public virtual int testCaseCount { get; set; }
-		public virtual string suiteType { get; set; }
-		public virtual string testCasesUrl { get; set; }
-		public virtual bool inheritDefaultConfigurations { get; set; }
-		public virtual bool defaultConfigurations { get; set; }
-		public virtual string state { get; set; }
-		public virtual object lastUpdatedBy { get; set; }
-		public virtual DateTime lastUpdatedDate { get; set; }
+		public virtual int Id { get; set; }
+		public virtual string Name { get; set; }
+		public virtual string Url { get; set; }
+		public virtual Project Project { get; set; }
+		public virtual TestPlan Plan { get; set; }
+		public virtual int Revision { get; set; }
+		public virtual int TestCaseCount { get; set; }
+		public virtual string SuiteType { get; set; }
+		public virtual string TestCasesUrl { get; set; }
+		public virtual bool InheritDefaultConfigurations { get; set; }
+		public virtual bool DefaultConfigurations { get; set; }
+		public virtual string State { get; set; }
+		public virtual object LastUpdatedBy { get; set; }
+		public virtual DateTime LastUpdatedDate { get; set; }
 	}
 }
 

@@ -7,11 +7,9 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-namespace TfsAutomation.Core
+namespace TfsAutomation.Core.ObjectModel
 {
-	using System;
-
-	public class Field
+    public class Field
 	{
 		/*
 		sample
@@ -23,11 +21,11 @@ namespace TfsAutomation.Core
 		  "url": "https://fabrikam.visualstudio.com/DefaultCollection/_apis/wit/fields/System.IterationPath"
 		}
 		*/
-		public virtual string name { get; set; }
-		public virtual string referenceName { get; set; }
-		public virtual string type { get; set; }
-		public virtual bool readOnly { get; set; }
-		public virtual string url { get; set; }
+		public virtual string Name { get; set; }
+		public virtual string ReferenceName { get; set; }
+		public virtual string Type { get; set; }
+		public virtual bool ReadOnly { get; set; }
+		public virtual string Url { get; set; }
 	}
 }
 

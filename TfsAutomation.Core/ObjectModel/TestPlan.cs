@@ -7,11 +7,9 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-namespace TfsAutomation.Core
+namespace TfsAutomation.Core.ObjectModel
 {
-	using System;
-
-	public class TestPlan
+    public class TestPlan
 	{
 		/*
 		sample
@@ -361,15 +359,15 @@ namespace TfsAutomation.Core
 		  "count": 17
 		}
 		*/
-		public virtual int id { get; set; }
-		public virtual string name { get; set; }
-		public virtual string url { get; set; }
-		public virtual Project project { get; set; }
-		public virtual object area { get; set; }
-		public virtual string iteration { get; set; }
-		public virtual string state { get; set; }
-		public virtual object rootSuite { get; set; }
-		public virtual string clientUrl { get; set; }
+		public virtual int Id { get; set; }
+		public virtual string Name { get; set; }
+		public virtual string Url { get; set; }
+		public virtual Project Project { get; set; }
+		public virtual object Area { get; set; }
+		public virtual string Iteration { get; set; }
+		public virtual string State { get; set; }
+		public virtual object RootSuite { get; set; }
+		public virtual string ClientUrl { get; set; }
 	}
 }
 

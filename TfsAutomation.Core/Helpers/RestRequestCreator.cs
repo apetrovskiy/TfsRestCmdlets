@@ -7,19 +7,16 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-namespace TfsAutomation.Core
+namespace TfsAutomation.Core.Helpers
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Net;
-	using Newtonsoft.Json;
-	using Newtonsoft.Json.Linq;
-	using Spring.Http.Client;
-	using Spring.Http.Converters.Json;
-	using Spring.Rest.Client;
-	using TfsAutomation.Core.ObjectModel;
+    using System.Net;
+    using ObjectModel;
+    using Spring.Http.Client;
+    using Spring.Http.Converters.Json;
+    using Spring.Rest.Client;
+    using TfsData;
 
-	public class RestRequestCreator
+    public class RestRequestCreator
 	{
 		RestTemplate _restTemplate;
 
@@ -47,7 +44,7 @@ namespace TfsAutomation.Core
 				_restTemplate = new RestTemplate(TfsData.BaseUrl);
 			var requestFactory = new WebClientHttpRequestFactory();
 			switch (TfsData.AuthenticationType) {
-				case AuthenticationTypes.NTLM:
+				case AuthenticationTypes.Ntlm:
 					requestFactory.Credentials = new NetworkCredential(Username, Password, Domain);
 					break;
 				case AuthenticationTypes.OAuth:
@@ -59,9 +56,9 @@ namespace TfsAutomation.Core
 			_restTemplate.MessageConverters.Add(new NJsonHttpMessageConverter());
 		}
 
-		public virtual string Domain { get { return TfsData.Domain; } }
-		public virtual string Username { get { return TfsData.Username; } }
-		public virtual string Password { get { return TfsData.Password; } }
+		public virtual string Domain => TfsData.Domain;
+	    public virtual string Username => TfsData.Username;
+	    public virtual string Password => TfsData.Password;
 	}
 }
 
